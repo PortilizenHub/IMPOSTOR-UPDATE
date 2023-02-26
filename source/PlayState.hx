@@ -1453,7 +1453,6 @@ class PlayState extends MusicBeatState
 				whiteAwkward.animation.addByPrefix('stare', 'white stare', 24, false);
 				whiteAwkward.animation.play('sweat');
 				whiteAwkward.antialiasing = true;
-				add(whiteAwkward);
 
 				if (isStoryMode && SONG.song.toLowerCase() != 'oversight')
 				{
@@ -1464,6 +1463,7 @@ class PlayState extends MusicBeatState
 					henryTeleporter.scrollFactor.set(1, 1);
 					henryTeleporter.visible = true;
 					add(henryTeleporter);
+				        add(whiteAwkward);
 
 					FlxMouseEventManager.add(henryTeleporter, function onMouseDown(teleporter:FlxSprite)
 					{
